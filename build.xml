@@ -17,7 +17,7 @@
 
 	<target name="compile">
 		<mkdir dir="build/classes" />
-		<javac srcdir="src" destdir="build/classes" debug="true">
+		<javac srcdir="src" destdir="build/classes" debug="true" encoding="UTF-8">
 			<classpath>
 				<path path="lib/dd-plist.jar" />
                 <path path="lib/jasmine-dev.jar" />
@@ -31,9 +31,13 @@
 	</target>
 
 	<target name="jars" depends="compile">
-		<jar destfile="build/${jar.name}">
+		<jar destfile="build/${jar.name}" >
 			<fileset dir="build/classes">
 			</fileset>
+		     <manifest>
+		        <attribute name="Built-By" value="Inotai Team"/>
+		        <attribute name="Main-Class" value="com.inotai.convertor.textmate.Main"/>
+		    </manifest>
 		</jar>
 	</target>
 
