@@ -13,13 +13,13 @@ The compiled package should be in `PROJECT_DIR\out\artifacts\tm2i_jar\`.
 
 ### How to use the package
 
-Using the package is pretty simple:
+Using the package is pretty simple (**The trailing slashes are important**):
 
-	java -jar tm2i.jar PathToInput PathToOutput
+	java -jar tm2i.jar PathToInput\ PathToOutput\
 
 Where:
 
-  * **PathToInput** - path to the directory, which contains your `*.tmbundle` directories
+  * **PathToInput** - path to the directory, which contains your `*.tmbundle` directories.
   * **PathToOutput** - path to any directory, where the converted bundles will be copied to
 
 Example:
